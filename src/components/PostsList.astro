@@ -1,0 +1,20 @@
+---
+import '../components/styles/PostsList.css'
+import dayjs from 'dayjs'
+
+const posts = await Astro.glob('../pages/posts/*.md');
+---
+
+<div class="posts-list-container">
+    <h1 class="posts-list-heading">Blog</h1>
+    {
+    posts.slice(0, 3).reverse().map((post) => (
+        <div class="posts-list">
+            <a href={post.url}>{post.frontmatter.title}</a>
+            <div class="post-date">
+                {dayjs(post.frontmatter.pubDate).format('MMMM DD, YYYY')}
+            </div>
+        </div>
+      ))
+    }
+</div>

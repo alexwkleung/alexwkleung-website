@@ -1,0 +1,12 @@
+.navbar-container {
+    position: relative;
+    /*border: 1px solid black;*/
+    width: 640px;
+    text-align: left;
+    margin: 0 auto;
+    top: 50px;
+}
+
+.home-a {
+    padding-right: 10px;
+}

@@ -1,0 +1,31 @@
+---
+import '../styles/global.css'
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import PostsList from '../components/PostsList.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Alex's Website</title>
+	</head>
+	<body>
+		<Navbar></Navbar>
+		<div class="home-info-container">
+			<h1 class="home-heading">About Me</h1>
+			<p class="home-paragraph">
+				Hello, I'm Alex. I am interested in software development. 
+				<br>
+				<br>
+				In my blog, I post about technology and random things.
+				<br>
+				<br>
+				Feel free to check out my <a href="https://github.com/alexwkleung">GitHub</a>.
+			</p>
+		</div>
+		<PostsList></PostsList>
+		<Footer></Footer>
+	</body>
+</html>
