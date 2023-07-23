@@ -1,5 +1,4 @@
 ---
-import '../styles/Navbar.css'
 ---
 
 <div class="navbar-container">
@@ -7,3 +6,42 @@ import '../styles/Navbar.css'
     <a href="/projects" class="projects-a">Projects</a>
     <a href="https://github.com/alexwkleung" class="github-a">GitHub</a>
 </div>
+
+<style>
+    @font-face {
+        font-family: 'Inter-Regular';
+        src: url('./fonts/Inter-Regular.ttf');
+    }
+    @font-face {
+        font-family: 'Inter-Bold';
+        src: url('./fonts/Inter-Bold.ttf');
+    }
+
+    .navbar-container {
+        position: relative;
+        /*border: 1px solid black;*/
+        width: 640px;
+        text-align: left;
+        margin: 0 auto;
+        top: 50px;
+        font-family: 'Inter-Regular';
+        font-size: 18px;
+    }
+
+    .home-a {
+        text-decoration: none;
+        padding-right: 10px;
+        color: #5C6BC0;
+    }
+
+    .projects-a {
+        text-decoration: none;
+        padding-right: 10px;
+        color: #5C6BC0;
+    }
+
+    .github-a {
+        text-decoration: none;
+        color: #5C6BC0;
+    }
+</style>

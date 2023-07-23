@@ -1,5 +1,4 @@
 ---
-import '../styles/PostsList.css'
 import dayjs from 'dayjs'
 
 const allPosts = [...await Astro.glob('../pages/posts/*.md')];
@@ -34,3 +33,49 @@ if(allPosts.length === 0) {
       )
     }
 </div>
+
+<style>
+    @font-face {
+        font-family: 'Inter-Regular';
+        src: url('../styles/fonts/Inter-Regular.ttf');
+    }
+    @font-face {
+        font-family: 'Inter-Bold';
+        src: url('../styles/fonts/Inter-Bold.ttf');
+    }
+
+    .posts-list-container {
+        position: relative;
+        width: 640px;
+        /*border: 1px solid black;*/
+        margin: 0 auto;
+        top: 85px;
+        bottom: 85px;
+        font-size: 18px;
+    }
+
+    .post-date {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        font-family: 'Inter-Regular';
+        font-size: 14px;
+    }
+
+    .posts-list-heading {
+        font-family: 'Inter-Bold';
+    }
+    #post-count {
+        font-family: 'Inter-Regular';
+        font-size: 18px;
+    }
+
+    .post-li {
+        list-style: none;
+        font-family: 'Inter-Regular';
+    }
+
+    .post-a {
+        text-decoration: none;
+        color: #5C6BC0;
+    }
+</style>
