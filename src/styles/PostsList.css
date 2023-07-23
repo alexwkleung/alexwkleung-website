@@ -14,11 +14,14 @@
     margin: 0 auto;
     top: 85px;
     bottom: 85px;
+    font-size: 18px;
 }
 
 .post-date {
     padding-top: 5px;
     padding-bottom: 10px;
+    font-family: 'Inter-Regular';
+    font-size: 14px;
 }
 
 .posts-list-heading {
@@ -36,4 +39,5 @@
 
 .post-a {
     text-decoration: none;
+    color: #5C6BC0;
 }
