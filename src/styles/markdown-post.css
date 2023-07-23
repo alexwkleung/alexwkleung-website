@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../styles/fonts/Inter-Regular.ttf');
+}
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('../styles/fonts/Inter-Bold.ttf');
+}
+
+.markdown-article {
+    position: relative;
+    width: 640px;
+    margin: 0 auto;
+    top: 70px;
+    padding-bottom: 100px;
+}
+
+.article-heading {
+    font-family: 'Inter-Bold';
+    font-size: 32px;
+}
+
+.article-author {
+    font-family: 'Inter-Regular';
+    font-size: 13px;
+}
+
+.article-date {
+    font-family: 'Inter-Regular';
+    font-size: 12px;
+    color: grey;
+    padding-left: 4px;
+}
+
+.article-slot-container {
+    position: relative;
+    top: 20px;
+    /*border: 1px solid black;*/
+}
+
+.article-slot-container h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter-Bold';
+}
+.article-slot-container p {
+    font-family: 'Inter-Regular';
+}
+.article-slot-container li {
+    font-family: 'Inter-Regular';
+}
+.article-slot-container ul {
+    font-family: 'Inter-Regular';
+}
+.article-slot-container blockquote  {
+    border-left: 3px solid #909090;
+    margin: 1.5em 2px;
+    padding: 0.5em 10px;
+    font-family: 'Inter-Regular', sans-serif;
+    font-size: 17px;
+    color: grey; 
+}
+.article-slot-container blockquote:before {
+    color: #c1c1c1; 
+    font-size: 4em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+}
+.article-slot-container hr {
+    border-color: black;
+}

@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('./fonts/Inter-Regular.ttf');
+}
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('./fonts/Inter-Bold.ttf');
+}
+
+.navbar-container {
+    position: relative;
+    /*border: 1px solid black;*/
+    width: 640px;
+    text-align: left;
+    margin: 0 auto;
+    top: 50px;
+    font-family: 'Inter-Regular'
+}
+
+.home-a {
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.projects-a {
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.github-a {
+    text-decoration: none;
+}

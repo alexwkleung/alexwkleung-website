@@ -1,0 +1,26 @@
+---
+import Navbar from '../components/Navbar.astro'
+import dayjs from 'dayjs'
+import '../styles/markdown-post.css'
+
+const { frontmatter } = Astro.props;
+---
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{frontmatter.title}</title>
+</head>
+<Navbar></Navbar>
+<article class="markdown-article">
+    <h1 class="article-heading">{frontmatter.title}</h1>
+    <span class="article-author">
+        By {frontmatter.author}
+        <span class="article-date">
+            {dayjs(frontmatter.date).format('MMMM DD, YYYY')}
+        </span>
+    </span>
+    <div class="article-slot-container">
+        <slot></slot>
+    </div>
+</article>
