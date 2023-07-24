@@ -9,7 +9,7 @@
 
 body {
     margin: 0;
-    background-color: #edecec;
+    /*background-color: #edecec;*/
 }
 
 .home-info-container {
@@ -17,7 +17,7 @@ body {
     /*border: 1px solid black;*/
     width: 640px;
     margin: 0 auto;
-    top: 65px;
+    top: 95px;
     font-family: 'Inter-Regular';
     font-size: 18px;
 }
