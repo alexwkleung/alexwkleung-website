@@ -9,6 +9,7 @@
 
 body {
     margin: 0;
+    background-color: #edecec;
 }
 
 .home-info-container {
@@ -27,4 +28,5 @@ body {
 
 .github-a {
     text-decoration: none;
+    color: #5C6BC0;
 }

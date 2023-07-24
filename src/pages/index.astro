@@ -1,14 +1,16 @@
 ---
 import '../styles/global.css'
 import Navbar from '../components/Navbar.astro'
-import PostsList from '../components/PostsList.astro'
+import Blog from '../components/Blog.astro'
+
+const indexTitle: string = "Alex Leung";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Alex Leung</title>
+		<title>{indexTitle}</title>
 	</head>
 	<body>
 		<Navbar></Navbar>
@@ -24,6 +26,6 @@ import PostsList from '../components/PostsList.astro'
 				Feel free to check out my <a href="https://github.com/alexwkleung" class="github-a">GitHub</a>.
 			</p>
 		</div>
-		<PostsList></PostsList>
+		<Blog></Blog>
 	</body>
 </html>
