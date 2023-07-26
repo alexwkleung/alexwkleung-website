@@ -1,2 +1,149 @@
 ---
+import Navbar from "../components/Navbar.astro"
+
+interface IProject {
+    name: string,
+    info: string,
+    link: string,
+    language: string[]
+}
+
+const project: IProject[] = [
+    {
+        name: "Iris",
+        info: "Iris is a comfortable Markdown note-taking app.",
+        link: "https://github.com/alexwkleung/Iris",
+        language: ["TypeScript", "Rust"]
+    },
+    {
+        name: "TermStylist",
+        info: "A header-only terminal colours library.",
+        link: "https://github.com/alexwkleung/TermStylist",
+        language: ["C++"]
+    }
+]
 ---
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Projects</title>
+</head>
+<Navbar></Navbar>
+<div class="project-intro">
+    <p id="project-intro-p">
+        Here is a list of my showcased projects. 
+        <br>
+        <br>
+        Other projects not in this list can be found on my GitHub.
+    </p>
+<div>
+<hr class="project-init-hr">
+{
+    project.map((props) => 
+        <div class="project-container">
+            <div class="project-name">
+                <h1 class="project-name-heading">{props.name}</h1>
+            </div>
+            <div class="project-info">
+                <p class="project-info-p">{props.info}</p>
+            </div>
+                {
+                    props.language.map((el) => 
+                        <span class="project-language">
+                            {el}
+                        </span>    
+                    )
+                }
+            <div class="project-link">
+                <a href={props.link} class="project-a">GitHub</a>
+            </div>
+            <hr class="project-hr"></hr>
+        </div>
+    )
+}
+
+<style>
+    @font-face {
+        font-family: 'Inter-Regular';
+        src: url('../styles/fonts/Inter-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: 'Inter-Bold';
+        src: url('../styles/fonts/Inter-Bold.ttf');
+    }
+
+    body {
+        margin: 0;
+    }
+    .project-intro {
+        position: relative;
+        font-family: 'Inter-Regular';
+        font-size: 18px;
+        margin: 0 auto;
+        width: 640px;
+        top: 110px;
+    }
+    .project-container {
+        position: relative;
+        margin: 0 auto;
+        width: 640px;
+        top: 10px;
+        /*border: 1px solid black;*/
+        padding-bottom: 10px;
+    }
+    .project-name-heading {
+        font-family: 'Inter-Bold';
+    }
+    .project-info-p {
+        font-family: 'Inter-Regular';
+        font-size: 18px;
+    }
+    .project-a {
+        position: relative;
+        font-family: 'Inter-Regular';
+        text-decoration: none;
+        color: #5C6BC0;
+        font-size: 18px;
+        top: 18px;
+    }
+    .project-language {
+        font-family: 'Inter-Regular';
+        /*border: 1px solid black;*/
+        border-radius: 10px;
+        padding: 3px 3px 3px 3px;
+        font-size: 14px;
+        background-color: rgb(208, 207, 207);
+        margin-right: 4px;
+    }
+    .project-init-hr {
+        position: relative;
+        top: 13px;
+        border-color: rgb(144, 143, 143);
+    }
+    .project-hr {
+        position: relative;
+        top: 25px;
+        border-color: rgb(144, 143, 143);
+    }
+
+    @media (max-width: 450px) {
+        .project-intro {
+            position: relative;
+            font-family: 'Inter-Regular';
+            font-size: 18px;
+            margin: 0 auto;
+            width: 350px;
+            top: 110px;
+        }
+        .project-container {
+            position: relative;
+            margin: 0 auto;
+            width: 350px;
+            top: 10px;
+            /*border: 1px solid black;*/
+            padding-bottom: 10px;
+        }
+    }
+</style>

@@ -11,11 +11,11 @@ const githubLink: string = "https://github.com/alexwkleung";
 <style>
     @font-face {
         font-family: 'Inter-Regular';
-        src: url('./fonts/Inter-Regular.ttf');
+        src: url('../styles/fonts/Inter-Regular.ttf');
     }
     @font-face {
         font-family: 'Inter-Bold';
-        src: url('./fonts/Inter-Bold.ttf');
+        src: url('../styles/fonts/Inter-Bold.ttf');
     }
 
     .navbar-container {
@@ -44,5 +44,18 @@ const githubLink: string = "https://github.com/alexwkleung";
     .github-a {
         text-decoration: none;
         color: #5C6BC0;
+    }
+
+    @media (max-width: 450px) {
+        .navbar-container {
+            position: relative;
+            /*border: 1px solid black;*/
+            width: 350px;
+            text-align: left;
+            margin: 0 auto;
+            top: 80px;
+            font-family: 'Inter-Regular';
+            font-size: 18px;
+        }
     }
 </style>

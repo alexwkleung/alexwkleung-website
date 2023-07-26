@@ -30,3 +30,29 @@ body {
     text-decoration: none;
     color: #5C6BC0;
 }
+
+@media (max-width: 450px) {
+    body {
+        margin: 0;
+        /*background-color: #edecec;*/
+    }
+    
+    .home-info-container {
+        position: relative;
+        /*border: 1px solid black;*/
+        width: 350px;
+        margin: 0 auto;
+        top: 95px;
+        font-family: 'Inter-Regular';
+        font-size: 18px;
+    }
+    
+    .home-heading {
+        font-family: 'Inter-Bold';
+    }
+    
+    .github-a {
+        text-decoration: none;
+        color: #5C6BC0;
+    }
+}
