@@ -27,7 +27,7 @@ if(allPosts.length === 0) {
                 <a href={post.url} class="post-a">{post.frontmatter.title}</a>
             </li>
             <div class="post-date">
-                {dayjs(post.frontmatter.pubDate).format('MMMM DD, YYYY')}
+                {dayjs(post.frontmatter.date).format('MMMM DD, YYYY')}
             </div>
         </div>
       )
