@@ -70,13 +70,14 @@
 }
 .article-slot-container a {
     color: #5C6BC0;
+    text-decoration: none;
 }
 .article-slot-container pre {
     padding: 15px 15px 15px 15px;
     font-size: 15px;
 }
 .article-slot-container p code {
-    color: rgb(201, 135, 11);
+    color: rgb(35, 35, 35);
     border-radius: 10px;
     padding: 2px 2px 2px 2px;
 }

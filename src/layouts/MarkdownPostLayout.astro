@@ -17,7 +17,7 @@ const { frontmatter } = Astro.props;
     <span class="article-author">
         By {frontmatter.author}
         <span class="article-date">
-            {dayjs(frontmatter.pubDate).format('MMMM DD, YYYY')}
+            {dayjs(frontmatter.date).format('MMMM DD, YYYY')}
         </span>
     </span>
     <div class="article-slot-container">
