@@ -40,7 +40,7 @@ body {
     .home-info-container {
         position: relative;
         /*border: 1px solid black;*/
-        width: 350px;
+        width: 300px;
         margin: 0 auto;
         top: 95px;
         font-family: 'Inter-Regular';

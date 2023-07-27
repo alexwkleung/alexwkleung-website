@@ -85,7 +85,7 @@
 @media (max-width: 450px) {
     .markdown-article {
         position: relative;
-        width: 350px;
+        width: 300px;
         margin: 0 auto;
         top: 95px;
         padding-bottom: 100px;
