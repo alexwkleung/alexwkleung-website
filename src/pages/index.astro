@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar.astro'
 import Blog from '../components/Blog.astro'
 
 const indexTitle: string = "Alex Leung";
+const githubLink: string = "https://github.com/alexwkleung";
 ---
 
 <html lang="en">
@@ -23,7 +24,7 @@ const indexTitle: string = "Alex Leung";
 				In my blog, I post about technology and random things.
 				<br>
 				<br>
-				Feel free to check out my <a href="https://github.com/alexwkleung" class="github-a">GitHub</a>.
+				Feel free to check out my <a href={githubLink} class="github-a">GitHub</a>.
 			</p>
 		</div>
 		<Blog></Blog>
