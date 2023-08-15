@@ -2,6 +2,8 @@
 
 My website. Created with Astro.
 
+Heavily inspired by [AqingCyan's website](https://www.aqingcyan.me/).
+
 # Setup
 
 Fork the repository
