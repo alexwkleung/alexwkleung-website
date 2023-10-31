@@ -2,11 +2,9 @@
 
 My website. Created with Astro.
 
-Heavily inspired by [AqingCyan's website](https://www.aqingcyan.me/).
+Heavily inspired by [AqingCyan's website](https://github.com/AqingCyan/me).
 
 # Setup
-
-Fork the repository
 
 Clone the repository 
 
