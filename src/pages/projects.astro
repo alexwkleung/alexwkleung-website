@@ -11,7 +11,7 @@ interface IProject {
 const project: IProject[] = [
     {
         name: "Iris",
-        info: "A comfortable Markdown note-taking app.",
+        info: "A comfortable note-taking app powered by Markdown.",
         link: "https://github.com/alexwkleung/Iris",
         language: ["TypeScript", "Rust"]
     },
@@ -49,9 +49,9 @@ const project: IProject[] = [
                 <p class="project-info-p">{props.info}</p>
             </div>
                 {
-                    props.language.map((el) => 
+                    props.language.map((lang) => 
                         <span class="project-language">
-                            {el}
+                            {lang}
                         </span>    
                     )
                 }
