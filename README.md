@@ -2,7 +2,7 @@
 
 My website. Created with Astro.
 
-Heavily inspired by [AqingCyan's website](https://github.com/AqingCyan/me).
+Heavily inspired by ~~[AqingCyan's website](https://github.com/AqingCyan/me)~~.
 
 # Setup
 
