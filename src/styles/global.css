@@ -17,13 +17,14 @@ body {
     /*border: 1px solid black;*/
     width: 648px;
     margin: 0 auto;
-    top: 95px;
+    top: 98px;
     font-family: 'Inter-Regular';
     font-size: 18px;
 }
 
 .home-heading {
     font-family: 'Inter-Bold';
+    font-size: 35px;
 }
 
 .github-a {

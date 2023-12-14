@@ -25,10 +25,10 @@ if(allPosts.length === 0) {
         <div class="post">
             <li class="post-li">
                 <a href={post.url} class="post-a">{post.frontmatter.title}</a>
+                <div class="post-date">
+                    {dayjs(post.frontmatter.date).format('MMMM DD, YYYY')}
+                </div>
             </li>
-            <div class="post-date">
-                {dayjs(post.frontmatter.date).format('MMMM DD, YYYY')}
-            </div>
         </div>
       )
     }
@@ -58,8 +58,10 @@ if(allPosts.length === 0) {
     .post-date {
         padding-top: 10px;
         padding-bottom: 20px;
+        padding-right: 10px;
         font-family: 'Inter-Regular';
-        font-size: 14px;
+        font-size: 16px;
+        color: grey;
     }
 
     .posts-list-heading {
@@ -78,6 +80,7 @@ if(allPosts.length === 0) {
     .post-a {
         text-decoration: none;
         color: #5C6BC0;
+        text-decoration-color: black;
     }
 
     @media (max-width: 450px) {
