@@ -11,7 +11,7 @@
     "clean": "rm src/pages/posts/*md"
   },
   "dependencies": {
-    "astro": "^2.9.0",
-    "dayjs": "^1.11.9"
+    "astro": "^4.0.5",
+    "dayjs": "^1.11.10"
   }
 }

@@ -7,5 +7,8 @@ export default defineConfig({
         shikiConfig: {
             theme: 'material-theme-lighter'
         }
+    },
+    server: {
+        port: 3000
     }
 });
