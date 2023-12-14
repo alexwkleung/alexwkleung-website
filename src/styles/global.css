@@ -27,11 +27,6 @@ body {
     font-size: 35px;
 }
 
-.github-a {
-    text-decoration: none;
-    color: #5C6BC0;
-}
-
 @media (max-width: 450px) {
     body {
         margin: 0;
@@ -50,10 +45,5 @@ body {
     
     .home-heading {
         font-family: 'Inter-Bold';
-    }
-    
-    .github-a {
-        text-decoration: none;
-        color: #5C6BC0;
     }
 }
