@@ -23,14 +23,14 @@
 
 .article-author {
     font-family: 'Inter-Regular';
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .article-date {
     font-family: 'Inter-Regular';
-    font-size: 13px;
+    font-size: 14px;
     color: grey;
-    padding-left: 4px;
+    padding-top: 10px;
 }
 
 .article-slot-container {
