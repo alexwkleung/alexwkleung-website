@@ -31,6 +31,7 @@ const project: IProject[] = [
 </head>
 <Navbar></Navbar>
 <div class="project-intro">
+    <h1 id="project-intro-heading">Projects</h1>
     <p id="project-intro-p">
         This is a list of my showcased projects. 
         <br>
@@ -77,6 +78,12 @@ const project: IProject[] = [
     body {
         margin: 0;
     }
+
+    #project-intro-heading {
+        font-family: 'Inter-Bold';
+        font-size: 35px;
+    }
+
     .project-intro {
         position: relative;
         font-family: 'Inter-Regular';
@@ -99,14 +106,14 @@ const project: IProject[] = [
     }
     .project-info-p {
         font-family: 'Inter-Regular';
-        font-size: 18px;
+        font-size: 17px;
     }
     .project-a {
         position: relative;
         font-family: 'Inter-Regular';
         text-decoration: none;
         color: #5C6BC0;
-        font-size: 18px;
+        font-size: 17px;
         top: 18px;
     }
     .project-language {
