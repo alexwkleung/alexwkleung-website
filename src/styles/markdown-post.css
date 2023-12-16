@@ -17,17 +17,17 @@
 }
 
 .article-heading {
-    font-family: 'Inter-Bold';
+    font-family: 'Inter-Bold', 'system-ui';
     font-size: 32px;
 }
 
 .article-author {
-    font-family: 'Inter-Regular';
+    font-family: 'Inter-Regular', 'system-ui';
     font-size: 15px;
 }
 
 .article-date {
-    font-family: 'Inter-Regular';
+    font-family: 'Inter-Regular', 'system-ui';
     font-size: 15px;
     color: grey;
     padding-top: 10px;
@@ -40,22 +40,22 @@
 }
 
 .article-slot-container h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter-Bold';
+    font-family: 'Inter-Bold', 'system-ui';
 }
 .article-slot-container p {
-    font-family: 'Inter-Regular';
+    font-family: 'Inter-Regular', 'system-ui';
 }
 .article-slot-container li {
-    font-family: 'Inter-Regular';
+    font-family: 'Inter-Regular', 'system-ui';
 }
 .article-slot-container ul {
-    font-family: 'Inter-Regular';
+    font-family: 'Inter-Regular', 'system-ui';
 }
 .article-slot-container blockquote  {
     border-left: 3px solid #909090;
     margin: 1.5em 2px;
     padding: 0.5em 10px;
-    font-family: 'Inter-Regular', sans-serif;
+    font-family: 'Inter-Regular', sans-serif, 'system-ui';
     font-size: 17px;
     color: grey; 
 }

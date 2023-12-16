@@ -18,12 +18,12 @@ body {
     width: 648px;
     margin: 0 auto;
     top: 98px;
-    font-family: 'Inter-Regular';
+    font-family: 'Inter-Regular', 'system-ui';
     font-size: 18px;
 }
 
 .home-heading {
-    font-family: 'Inter-Bold';
+    font-family: 'Inter-Bold', 'system-ui';
     font-size: 35px;
 }
 
@@ -39,11 +39,11 @@ body {
         width: 300px;
         margin: 0 auto;
         top: 95px;
-        font-family: 'Inter-Regular';
+        font-family: 'Inter-Regular', 'system-ui';
         font-size: 18px;
     }
     
     .home-heading {
-        font-family: 'Inter-Bold';
+        font-family: 'Inter-Bold', 'system-ui';
     }
 }
