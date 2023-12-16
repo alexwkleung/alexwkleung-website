@@ -30,39 +30,41 @@ const project: IProject[] = [
     <title>Projects</title>
 </head>
 <Navbar></Navbar>
-<div class="project-intro">
-    <h1 id="project-intro-heading">Projects</h1>
-    <p id="project-intro-p">
-        This is a list of my showcased projects. 
-        <br>
-        <br>
-        Other projects can be found on my GitHub.
-    </p>
+<div id="projects-main-container">
+    <div class="project-intro">
+        <h1 id="project-intro-heading">Projects</h1>
+        <p id="project-intro-p">
+            This is a list of my showcased projects. 
+            <br>
+            <br>
+            Other projects can be found on my GitHub.
+        </p>
+    </div>
+    <hr class="project-init-hr">
+    {
+        project.map((props) => 
+            <div class="project-container">
+                <div class="project-name">
+                    <h1 class="project-name-heading">{props.name}</h1>
+                </div>
+                <div class="project-info">
+                    <p class="project-info-p">{props.info}</p>
+                </div>
+                    {
+                        props.language.map((lang) => 
+                            <span class="project-language">
+                                {lang}
+                            </span>    
+                        )
+                    }
+                <div class="project-link">
+                    <a href={props.link} class="project-a">GitHub Repo</a>
+                </div>
+                <hr class="project-hr"></hr>
+            </div>
+        )
+    }
 </div>
-<hr class="project-init-hr">
-{
-    project.map((props) => 
-        <div class="project-container">
-            <div class="project-name">
-                <h1 class="project-name-heading">{props.name}</h1>
-            </div>
-            <div class="project-info">
-                <p class="project-info-p">{props.info}</p>
-            </div>
-                {
-                    props.language.map((lang) => 
-                        <span class="project-language">
-                            {lang}
-                        </span>    
-                    )
-                }
-            <div class="project-link">
-                <a href={props.link} class="project-a">GitHub Repo</a>
-            </div>
-            <hr class="project-hr"></hr>
-        </div>
-    )
-}
 
 <style>
     @font-face {
@@ -79,6 +81,16 @@ const project: IProject[] = [
         margin: 0;
     }
 
+    #projects-main-container {
+        position: relative;
+        /*border: 1px solid black;*/
+        width: 648px;
+        margin: 0 auto;
+        top: 98px;
+        height: calc(100vh - 640px);
+        padding-bottom: 500px;
+    }
+
     #project-intro-heading {
         font-family: 'Inter-Bold', 'system-ui';
         font-size: 35px;
@@ -90,19 +102,20 @@ const project: IProject[] = [
         font-size: 18px;
         margin: 0 auto;
         width: 640px;
-        top: 100px;
+        top: 0px;
     }
     .project-container {
         position: relative;
         margin: 0 auto;
         width: 640px;
-        top: 122px;
+        top: 10px;
         /*border: 1px solid black;*/
         padding-bottom: 10px;
     }
     .project-name-heading {
         font-family: 'Inter-Bold', 'system-ui';
         font-size: 35px;
+        padding-top: 10px;
     }
     .project-info-p {
         font-family: 'Inter-Regular', 'system-ui';
@@ -127,26 +140,35 @@ const project: IProject[] = [
     }
     .project-init-hr {
         position: relative;
-        top: 120px;
+        top: 20px;
         width: 640px;
         border-color: rgb(144, 143, 143);
         border-bottom: 0px;
     }
     .project-hr {
         position: relative;
-        top: 25px;
+        top: 30px;
         border-color: rgb(144, 143, 143);
         border-bottom: 0px;
     }
 
     @media (max-width: 450px) {
+        #projects {
+            position: relative;
+            border: 1px solid black;
+            width: 300px;
+            margin: 0 auto;
+            top: 98px;
+            height: calc(100vh - 100px);
+        }
+
         .project-intro {
             position: relative;
             font-family: 'Inter-Regular', 'system-ui';
             font-size: 18px;
             margin: 0 auto;
             width: 300px;
-            top: 100px;
+            top: 0px;
         }
         .project-container {
             position: relative;
@@ -158,7 +180,7 @@ const project: IProject[] = [
         }
         .project-init-hr {
             position: relative;
-            top: 120px;
+            top: 20px;
             width: 300px;
             border-color: rgb(144, 143, 143);
             border-bottom: 0px;
