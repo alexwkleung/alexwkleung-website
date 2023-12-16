@@ -153,13 +153,14 @@ const project: IProject[] = [
     }
 
     @media (max-width: 450px) {
-        #projects {
+        #projects-main-container {
             position: relative;
-            border: 1px solid black;
+            /*border: 1px solid black;*/
             width: 300px;
             margin: 0 auto;
             top: 98px;
-            height: calc(100vh - 100px);
+            height: calc(100vh - 640px);
+            padding-bottom: 500px;
         }
 
         .project-intro {
@@ -174,7 +175,7 @@ const project: IProject[] = [
             position: relative;
             margin: 0 auto;
             width: 300px;
-            top: 122px;
+            top: 10px;
             /*border: 1px solid black;*/
             padding-bottom: 10px;
         }
