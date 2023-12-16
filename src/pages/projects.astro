@@ -40,7 +40,6 @@ const project: IProject[] = [
             Other projects can be found on my GitHub.
         </p>
     </div>
-    <hr class="project-init-hr">
     {
         project.map((props) => 
             <div class="project-container">
@@ -60,7 +59,6 @@ const project: IProject[] = [
                 <div class="project-link">
                     <a href={props.link} class="project-a">GitHub Repo</a>
                 </div>
-                <hr class="project-hr"></hr>
             </div>
         )
     }
@@ -108,13 +106,13 @@ const project: IProject[] = [
         position: relative;
         margin: 0 auto;
         width: 640px;
-        top: 10px;
+        top: 0px;
         /*border: 1px solid black;*/
         padding-bottom: 10px;
     }
     .project-name-heading {
         font-family: 'Inter-Bold', 'system-ui';
-        font-size: 35px;
+        font-size: 30px;
         padding-top: 10px;
     }
     .project-info-p {
@@ -137,19 +135,6 @@ const project: IProject[] = [
         font-size: 15px;
         background-color: rgb(217 215 215);
         margin-right: 6px;
-    }
-    .project-init-hr {
-        position: relative;
-        top: 20px;
-        width: 640px;
-        border-color: rgb(144, 143, 143);
-        border-bottom: 0px;
-    }
-    .project-hr {
-        position: relative;
-        top: 30px;
-        border-color: rgb(144, 143, 143);
-        border-bottom: 0px;
     }
 
     @media (max-width: 450px) {
@@ -178,13 +163,6 @@ const project: IProject[] = [
             top: 10px;
             /*border: 1px solid black;*/
             padding-bottom: 10px;
-        }
-        .project-init-hr {
-            position: relative;
-            top: 20px;
-            width: 300px;
-            border-color: rgb(144, 143, 143);
-            border-bottom: 0px;
         }
     }
 </style>
