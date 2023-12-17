@@ -15,7 +15,7 @@ body {
 .home-info-container {
     position: relative;
     /*border: 1px solid black;*/
-    width: 648px;
+    width: 640px;
     margin: 0 auto;
     top: 98px;
     font-family: 'Inter-Regular', 'system-ui';
