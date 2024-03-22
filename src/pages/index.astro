@@ -1,16 +1,15 @@
 ---
 import '../styles/global.css'
 import Navbar from '../components/Navbar.astro'
-import Blog from '../components/Blog.astro'
 
-const indexTitle: string = "Alex Leung";
+const indexDocTitle: string = "Alex Leung | Home";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>{indexTitle}</title>
+		<title>{indexDocTitle}</title>
 	</head>
 	<body>
 		<Navbar></Navbar>
@@ -20,9 +19,9 @@ const indexTitle: string = "Alex Leung";
 				Hello, I'm Alex.
 				<br>
 				<br>
-				My interests are software development, open-source, and human-computer interaction.
+				I'm interested in software development, open-source, and human-computer interaction. I am always learning and being 
+				fascinated by the intersection between humans and software.
 			</p>
 		</div>
-		<Blog></Blog>
 	</body>
 </html>

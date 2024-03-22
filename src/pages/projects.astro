@@ -22,12 +22,14 @@ const project: IProject[] = [
         language: ["C++"]
     }
 ]
+
+const projectsDocTitle: string = "Alex Leung | Projects";
 ---
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Projects</title>
+    <title>{projectsDocTitle}</title>
 </head>
 <Navbar></Navbar>
 <div id="projects-main-container">
@@ -76,11 +78,14 @@ const project: IProject[] = [
 
     body {
         margin: 0;
+        -webkit-font-smoothing: subpixel-antialiased;
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        text-transform: none;
     }
 
     #projects-main-container {
         position: relative;
-        /*border: 1px solid black;*/
         width: 648px;
         margin: 0 auto;
         top: 98px;
@@ -89,13 +94,13 @@ const project: IProject[] = [
     }
 
     #project-intro-heading {
-        font-family: 'Inter-Bold', 'system-ui';
+        font-family: 'Inter-Bold';
         font-size: 35px;
     }
 
     .project-intro {
         position: relative;
-        font-family: 'Inter-Regular', 'system-ui';
+        font-family: 'Inter-Regular';
         font-size: 18px;
         margin: 0 auto;
         width: 640px;
@@ -106,40 +111,37 @@ const project: IProject[] = [
         margin: 0 auto;
         width: 640px;
         top: 0px;
-        /*border: 1px solid black;*/
         padding-bottom: 10px;
     }
     .project-name-heading {
-        font-family: 'Inter-Bold', 'system-ui';
+        font-family: 'Inter-Bold';
         font-size: 30px;
         padding-top: 10px;
     }
     .project-info-p {
-        font-family: 'Inter-Regular', 'system-ui';
-        font-size: 17px;
+        font-family: 'Inter-Regular';
+        font-size: 18px;
     }
     .project-a {
         position: relative;
-        font-family: 'Inter-Regular', 'system-ui';
+        font-family: 'Inter-Regular';
         text-decoration: none;
         color: #5C6BC0;
-        font-size: 17px;
+        font-size: 18px;
         top: 18px;
     }
     .project-language {
-        font-family: 'Inter-Regular', system-ui;
-        /*border: 1px solid black;*/
+        font-family: 'Inter-Regular';
         border-radius: 5px;
         padding: 3px 3px 3px 3px;
-        font-size: 15px;
+        font-size: 16px;
         background-color: rgb(217 215 215);
-        margin-right: 6px;
+        margin-right: 7px;
     }
 
     @media (max-width: 450px) {
         #projects-main-container {
             position: relative;
-            /*border: 1px solid black;*/
             width: 300px;
             margin: 0 auto;
             top: 98px;
@@ -149,7 +151,7 @@ const project: IProject[] = [
 
         .project-intro {
             position: relative;
-            font-family: 'Inter-Regular', 'system-ui';
+            font-family: 'Inter-Regular';
             font-size: 18px;
             margin: 0 auto;
             width: 300px;
@@ -160,7 +162,6 @@ const project: IProject[] = [
             margin: 0 auto;
             width: 300px;
             top: 10px;
-            /*border: 1px solid black;*/
             padding-bottom: 10px;
         }
     }

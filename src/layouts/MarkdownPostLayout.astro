@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{frontmatter.title}</title>
+    <title>Alex Leung | {frontmatter.title}</title>
 </head>
 <Navbar></Navbar>
 <article class="markdown-article">
@@ -19,6 +19,7 @@ const { frontmatter } = Astro.props;
         <div class="article-date">
             {dayjs(frontmatter.date).format('MMMM DD, YYYY')}
         </div>
+        <hr class="markdown-article-hr-intro">
     </span>
     <div class="article-slot-container">
         <slot></slot>
@@ -28,6 +29,15 @@ const { frontmatter } = Astro.props;
 <style>
     body {
         margin: 0;
-        /*background-color: #edecec;*/
+        -webkit-font-smoothing: subpixel-antialiased;
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        text-transform: none;
+    }
+
+    .markdown-article-hr-intro {
+        border-bottom: none;
+        border-color: #000000;
+        margin-top: 30px;
     }
 </style>

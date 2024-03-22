@@ -1,8 +1,8 @@
 # alexwkleung website
 
-My website. Created with Astro.
+My website (blog/portfolio). Created with Astro.
 
-Heavily inspired by ~~[AqingCyan's website](https://github.com/AqingCyan/me)~~.
+Heavily inspired by [AqingCyan's website](https://github.com/AqingCyan/me) *(repo does not exist anymore)*.
 
 # Setup
 
@@ -24,7 +24,19 @@ Clean up `src/pages/posts` so you can add your own posts in the directory
 npm run clean
 ```
 
-If using VSCode, install the Astro extension
+If using VS Code, install the Astro extension
+
+This is the template for frontmatter used in blog posts:
+
+```md
+---
+layout: '../../layouts/MarkdownPostLayout.astro'
+title: Post Title
+date: MM-DD-YYYY
+description: A description
+author: My Name
+---
+```
 
 # License
 

@@ -20,6 +20,9 @@ if(allPosts.length === 0) {
             ({postCount})
         </span>
     </h1>
+    <p class="blog-list-intro-p">
+        This is my personal blog.
+    </p>
     {
     allPosts.reverse().map((post) =>
         <div class="post">
@@ -47,11 +50,10 @@ if(allPosts.length === 0) {
     .posts-list-container {
         position: relative;
         width: 640px;
-        /*border: 1px solid black;*/
         margin: 0 auto;
-        top: 115px;
+        top: 98px;
         bottom: 85px;
-        font-size: 17px;
+        font-size: 18px;
         padding-bottom: 65px;
     }
 
@@ -59,23 +61,23 @@ if(allPosts.length === 0) {
         padding-top: 10px;
         padding-bottom: 20px;
         padding-right: 10px;
-        font-family: 'Inter-Regular', 'system-ui';
-        font-size: 15px;
+        font-family: 'Inter-Regular';
+        font-size: 16px;
         color: grey;
     }
 
     .posts-list-heading {
-        font-family: 'Inter-Bold', 'system-ui';
+        font-family: 'Inter-Bold';
         font-size: 35px;
     }
     #post-count {
-        font-family: 'Inter-Regular', 'system-ui';
-        font-size: 17px;
+        font-family: 'Inter-Regular';
+        font-size: 18px;
     }
 
     .post-li {
         list-style: none;
-        font-family: 'Inter-Regular', 'system-ui';
+        font-family: 'Inter-Regular';
     }
 
     .post-a {
@@ -84,16 +86,35 @@ if(allPosts.length === 0) {
         text-decoration-color: black;
     }
 
+    .blog-list-intro-p {
+        position: relative;
+        font-family: 'Inter-Regular';
+        font-size: 18px;
+        margin: 0 auto;
+        width: 640px;
+        top: 0px;
+        padding-bottom: 30px;
+    }
+
     @media (max-width: 450px) {
         .posts-list-container {
             position: relative;
             width: 300px;
-            /*border: 1px solid black;*/
             margin: 0 auto;
             top: 115px;
             bottom: 85px;
             font-size: 17px;
             padding-bottom: 65px;
+        }
+
+        .blog-list-intro-p {
+            position: relative;
+            font-family: 'Inter-Regular';
+            font-size: 18px;
+            margin: 0 auto;
+            width: 300px;
+            top: 0px;
+            padding-bottom: 30px;
         }
     }
 </style>
