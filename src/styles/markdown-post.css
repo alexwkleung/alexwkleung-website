@@ -48,30 +48,6 @@ body {
 .article-slot-container h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter-Bold';
 }
-.article-slot-container h1::before {
-    content: "# ";
-    color: grey;
-}
-.article-slot-container h2::before {
-    content: "## ";
-    color: grey;
-}
-.article-slot-container h3::before {
-    content: "### ";
-    color: grey;
-}
-.article-slot-container h4::before {
-    content: "#### ";
-    color: grey;
-}
-.article-slot-container h5::before {
-    content: "##### ";
-    color: grey;
-}
-.article-slot-container h6::before{
-    content: "###### ";
-    color: grey;
-}
 
 .article-slot-container p {
     font-family: 'Inter-Regular';
