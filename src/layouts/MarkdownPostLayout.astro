@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Alex Leung | {frontmatter.title}</title>
+    <title>{frontmatter.title} | Alex Leung</title>
 </head>
 <Navbar></Navbar>
 <article class="markdown-article">
@@ -43,3 +43,12 @@ const { frontmatter } = Astro.props;
         margin-top: 30px;
     }
 </style>
+
+<script>
+    function openAnchorNewTab(): void {
+        document.querySelectorAll(".article-slot-container a").forEach((el) => {
+            el.setAttribute("target", "_blank");
+        })
+    }
+    openAnchorNewTab();
+</script>

@@ -22,14 +22,12 @@ const project: IProject[] = [
         language: ["C++"]
     }
 ]
-
-const projectsDocTitle: string = "Alex Leung | Projects";
 ---
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{projectsDocTitle}</title>
+    <title>Projects | Alex Leung</title>
 </head>
 <Navbar></Navbar>
 <div id="projects-main-container">
@@ -59,7 +57,7 @@ const projectsDocTitle: string = "Alex Leung | Projects";
                         )
                     }
                 <div class="project-link">
-                    <a href={props.link} class="project-a">GitHub Repo</a>
+                    <a href={props.link} class="project-a" target="_blank">GitHub Repo</a>
                 </div>
             </div>
         )
