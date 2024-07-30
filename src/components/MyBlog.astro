@@ -15,13 +15,13 @@ if(allPosts.length === 0) {
 ---
 
 <div class="posts-list-container">
-    <h1 class="posts-list-heading">Blog 
+    <h2 class="posts-list-heading">Blog 
         <span id="post-count">
             ({postCount})
         </span>
-    </h1>
+    </h2>
     <p class="blog-list-intro-p">
-        This is my personal blog.
+        This is my personal blog. I use this to share my thoughts/opinions and a place to write more.
     </p>
     {
     allPosts.reverse().map((post) =>
@@ -38,93 +38,21 @@ if(allPosts.length === 0) {
 </div>
 
 <style>
-    @font-face {
-        font-family: 'Inter-Regular';
-        src: url('../styles/fonts/Inter-Regular.ttf');
-    }
-    @font-face {
-        font-family: 'Inter-Bold';
-        src: url('../styles/fonts/Inter-Bold.ttf');
-    }
-
-    body {
-        margin: 0;
-        -webkit-font-smoothing: subpixel-antialiased;
-        text-rendering: optimizeLegibility;
-        -moz-osx-font-smoothing: grayscale;
-        text-transform: none;
-        background-color: #ffffff;
-        color: #000000;
-    }
-
-    .posts-list-container {
-        position: relative;
-        width: 640px;
-        margin: 0 auto;
-        top: 98px;
-        bottom: 85px;
-        font-size: 18px;
-        padding-bottom: 65px;
-    }
-
     .post-date {
-        padding-top: 10px;
-        padding-bottom: 20px;
-        padding-right: 10px;
-        font-family: 'Inter-Regular';
-        font-size: 16px;
         color: grey;
-    }
-
-    .posts-list-heading {
-        font-family: 'Inter-Bold';
-        font-size: 35px;
+        font-size: 0.9em;
+        margin-top: 5px;
     }
     #post-count {
-        font-family: 'Inter-Regular';
-        font-size: 18px;
+        font-size: 0.6em;
     }
 
     .post-li {
-        list-style: none;
-        font-family: 'Inter-Regular';
+        list-style-type: none;
     }
 
-    .post-a {
+    .post-a, .posts-list-container a {
         text-decoration: none;
         color: #5C6BC0;
-        text-decoration-color: black;
-    }
-
-    .blog-list-intro-p {
-        position: relative;
-        font-family: 'Inter-Regular';
-        font-size: 18px;
-        margin: 0 auto;
-        width: 640px;
-        top: 0px;
-        padding-bottom: 30px;
-    }
-
-    @media (max-width: 450px) {
-        .posts-list-container {
-            position: relative;
-            width: 300px;
-            margin: 0 auto;
-            top: 115px;
-            bottom: 85px;
-            font-size: 17px;
-            padding-bottom: 65px;
-        }
-
-        .blog-list-intro-p {
-            position: relative;
-            font-family: 'Inter-Regular';
-            font-size: 18px;
-            margin: 0 auto;
-            width: 300px;
-            top: 0px;
-            padding-bottom: 30px;
-        }
     }
 </style>

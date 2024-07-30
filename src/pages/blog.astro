@@ -1,12 +1,24 @@
 ---
-import NavBar from '../components/Navbar.astro'
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
 import MyBlog from '../components/MyBlog.astro'
+
+import '../styles/styles.css';
 ---
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Blog | Alex Leung</title>
-</head>
-<NavBar></NavBar>
-<MyBlog></MyBlog>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog | Alex Leung</title>
+	</head>
+	<body>
+		<div id="root">
+			<Navbar></Navbar>
+			<main>
+                <MyBlog></MyBlog>
+			</main>
+			<Footer></Footer>
+		</div>
+	</body>
+</html>

@@ -8,7 +8,7 @@ author: Alex Leung
 
 This is my first blog post. 
 
-# Creating My Website 
+## Creating My Website 
 
 If you take a peek at the [repository of this website](https://github.com/alexwkleung/alexwkleung-website), it is created with Astro. Initially my website was created in HTML, CSS, and JavaScript, but I didn't want to salvage it further, so that's why I never made it public.
 
@@ -18,7 +18,7 @@ You may have noticed that the minimal blog template [Lilian](https://github.com/
 
 *Small note:* I don't recommend users to use Lilian as their main blog template. It was really just a project to learn how to create a blog from scratch. If you want a decent blog template, you can fork/clone [this website](https://github.com/alexwkleung/alexwkleung-website).
 
-# Blog Writing
+## Blog Writing
 
 Having an internet trail in a form of a blog attached to your name *can* be scary. Despite being posted on your own website, you need to make sure the posted content isn't going to come back and haunt you in the future.
 

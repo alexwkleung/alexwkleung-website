@@ -1,0 +1,31 @@
+@import "normalize.css";
+
+@import "fonts.css";
+
+:root {
+	--main-padding: 10px;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 1.1em;
+    font-family: "Inter-Regular";
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+main {
+	flex: 1;
+	line-height: 1.6;
+	padding: calc(var(--main-padding) + 10px);
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: auto;
+	max-width: 1024px;
+}

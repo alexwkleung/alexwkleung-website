@@ -1,25 +1,30 @@
 ---
-import '../styles/global.css'
 import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+
+import '../styles/styles.css'
 ---
 
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Home | Alex Leung</title>
 	</head>
 	<body>
-		<Navbar></Navbar>
-		<div class="home-info-container">
-			<h1 class="home-heading">About Me</h1>
-			<p class="home-paragraph">
-				Hello, I'm Alex.
-				<br>
-				<br>
-				I'm interested in software development, open-source, and human-computer interaction. I am always learning and being 
-				fascinated by the intersection between humans and software.
-			</p>
+		<div id="root">
+			<Navbar></Navbar>
+			<main>
+				<h2 class="home-heading">About Me</h1>
+				<p>
+					Hello, I'm Alex.
+				</p>
+				<p>
+					I'm interested in software development, open-source, human-computer interaction, and writing. I am always learning and being 
+					fascinated by the intersection between humans and software.
+				</p>
+			</main>
+			<Footer></Footer>
 		</div>
 	</body>
 </html>

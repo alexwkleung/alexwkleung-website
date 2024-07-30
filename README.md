@@ -2,7 +2,11 @@
 
 My website (blog/portfolio). Created with Astro.
 
-Heavily inspired by [AqingCyan's website](https://github.com/AqingCyan/me) *(repo does not exist anymore)*.
+# Design 
+
+- Initial design inspired by [AqingCyan's website](https://github.com/AqingCyan/me) *(repo does not exist anymore)*
+- Mobile-first approach
+- Flexbox + Grid layouts
 
 # Setup
 

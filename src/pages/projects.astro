@@ -1,5 +1,8 @@
 ---
 import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+
+import '../styles/styles.css'
 
 interface IProject {
     name: string,
@@ -24,146 +27,98 @@ const project: IProject[] = [
 ]
 ---
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Projects | Alex Leung</title>
-</head>
-<Navbar></Navbar>
-<div id="projects-main-container">
-    <div class="project-intro">
-        <h1 id="project-intro-heading">Projects</h1>
-        <p id="project-intro-p">
-            This is a list of my showcased projects. 
-            <br>
-            <br>
-            Other projects can be found on my GitHub.
-        </p>
-    </div>
-    {
-        project.map((props) => 
-            <div class="project-container">
-                <div class="project-name">
-                    <h1 class="project-name-heading">{props.name}</h1>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects | Alex Leung</title>
+	</head>
+	<body>
+		<div id="root">
+			<Navbar></Navbar>
+			<main>
+				<div id="projects-main-container">
+                    <div class="project-intro">
+                        <h2 id="project-intro-heading">Projects</h2>
+                        <p>
+                            This is a list of my showcased projects. Other projects can be found on my GitHub.
+                        </p>
+                    </div>
+
+                    <div id="project-grid-container">
+                        {
+                            project.map((props) => 
+                                <div class="project-container">
+                                    <h2 class="project-name-heading">{props.name}</h2>
+
+                                    <div class="project-info">
+                                        <p>{props.info}</p>
+                                    </div>
+
+                                        {
+                                            props.language.map((lang) => 
+                                                <span class="project-language">
+                                                    {lang}
+                                                </span>    
+                                            )
+                                        }
+
+                                    <div class="project-link-container">
+                                        <a href={props.link} class="project-a" target="_blank">GitHub Repo</a>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>
                 </div>
-                <div class="project-info">
-                    <p class="project-info-p">{props.info}</p>
-                </div>
-                    {
-                        props.language.map((lang) => 
-                            <span class="project-language">
-                                {lang}
-                            </span>    
-                        )
-                    }
-                <div class="project-link">
-                    <a href={props.link} class="project-a" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-        )
-    }
-</div>
+			</main>
+			<Footer></Footer>
+		</div>
+	</body>
+</html>
 
 <style>
-    @font-face {
-        font-family: 'Inter-Regular';
-        src: url('../styles/fonts/Inter-Regular.ttf');
+    .project-container:not(.project-container:first-child) {
+        margin-top: 40px;
+        border-top: solid 1px black;
     }
-    @font-face {
-        font-family: 'Inter-Bold';
-        src: url('../styles/fonts/Inter-Bold.ttf');
-    }
-
-    body {
-        margin: 0;
-        -webkit-font-smoothing: subpixel-antialiased;
-        text-rendering: optimizeLegibility;
-        -moz-osx-font-smoothing: grayscale;
-        text-transform: none;
-        background-color: #ffffff;
-        color: #000000;
+    .project-container:last-child {
+        margin-bottom: 20px;
     }
 
-    #projects-main-container {
-        position: relative;
-        width: 648px;
-        margin: 0 auto;
-        top: 98px;
-        height: calc(100vh - 640px);
-        padding-bottom: 500px;
-    }
-
-    #project-intro-heading {
-        font-family: 'Inter-Bold';
-        font-size: 35px;
-    }
-
-    .project-intro {
-        position: relative;
-        font-family: 'Inter-Regular';
-        font-size: 18px;
-        margin: 0 auto;
-        width: 640px;
-        top: 0px;
-    }
-    .project-container {
-        position: relative;
-        margin: 0 auto;
-        width: 640px;
-        top: 0px;
-        padding-bottom: 10px;
-    }
-    .project-name-heading {
-        font-family: 'Inter-Bold';
-        font-size: 30px;
-        padding-top: 10px;
-    }
-    .project-info-p {
-        font-family: 'Inter-Regular';
-        font-size: 18px;
-    }
     .project-a {
         position: relative;
-        font-family: 'Inter-Regular';
         text-decoration: none;
         color: #5C6BC0;
-        font-size: 18px;
+        font-size: 1em;
         top: 18px;
     }
+
     .project-language {
-        font-family: 'Inter-Regular';
         border-radius: 5px;
-        padding: 3px 3px 3px 3px;
+        padding: 3px;
         font-size: 16px;
         background-color: rgb(217 215 215);
         margin-right: 7px;
         color: #000000;
     }
 
-    @media (max-width: 450px) {
-        #projects-main-container {
-            position: relative;
-            width: 300px;
-            margin: 0 auto;
-            top: 98px;
-            height: calc(100vh - 640px);
-            padding-bottom: 600px;
+    @media (min-width: 920px) {
+        .project-container {
+            margin-bottom: 20px;
         }
 
-        .project-intro {
-            position: relative;
-            font-family: 'Inter-Regular';
-            font-size: 18px;
-            margin: 0 auto;
-            width: 300px;
-            top: 0px;
+        .project-container:not(.project-container:first-child) {
+            margin-top: 0px;
+            border-top: none;
         }
-        .project-container {
-            position: relative;
-            margin: 0 auto;
-            width: 300px;
-            top: 10px;
-            padding-bottom: 10px;
+        .project-container:last-child {
+            margin-bottom: 0px;
+        }
+
+        #project-grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 </style>
