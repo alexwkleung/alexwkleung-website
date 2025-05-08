@@ -4,7 +4,14 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 interface Projects {
   name: string;
   url: string;
-  stack: string;
+  stack: string[];
+  timeframe: string;
+}
+
+interface OpenSource {
+  name: string;
+  url: string;
+  stack: string[];
   timeframe: string;
 }
 
@@ -12,28 +19,28 @@ const projects: Projects[] = [
   {
     name: "Iris",
     url: "https://github.com/alexwkleung/Iris",
-    stack: "TypeScript, Rust, Electron",
+    stack: ["TypeScript", "Rust", "Electron"],
     timeframe: "2022 - 2024",
   },
   {
     name: "Block URL",
     url: "https://github.com/alexwkleung/block-url-extension",
-    stack: "React, TypeScript",
+    stack: ["React", "TypeScript"],
     timeframe: "2025",
   },
   {
     name: "TermStylist",
     url: "https://github.com/alexwkleung/TermStylist",
-    stack: "C++",
+    stack: ["C++"],
     timeframe: "2022",
   },
 ];
 
-const openSource = [
+const openSource: OpenSource[] = [
   {
     name: "Microsoft Visual Studio Code Documentation",
     url: "https://github.com/microsoft/vscode-docs/pulls?q=is%3Apr+author%3Aalexwkleung+is%3Aclosed",
-    stack: "Markdown, Git",
+    stack: ["Markdown", "Git"],
     timeframe: "2023 - 2024",
   },
 ];
@@ -49,12 +56,14 @@ const openSource = [
           <a href={project.url} class="project-url" target="_blank">
             <span class="project-name">{project.name}</span>
           </a>
-          <span class="project-stack">{project.stack.toUpperCase()}</span>
+          <span class="project-stack">{project.stack.join(", ").toUpperCase()}</span>
           <span class="project-timeframe">{project.timeframe}</span>
         </p>
       ))
     }
-    <div class="open-source-heading text">OPEN SOURCE</div>
+    <div class="open-source-heading text">
+      <div>OPEN SOURCE</div>
+    </div>
     <p class="projects-paragraph">A list of open-source contributions.</p>
     {
       openSource.map((org) => (
@@ -62,7 +71,7 @@ const openSource = [
           <a href={org.url} class="project-url" target="_blank">
             <span class="project-name">{org.name}</span>
           </a>
-          <span class="project-stack">{org.stack.toUpperCase()}</span>
+          <span class="project-stack">{org.stack.join(", ").toUpperCase()}</span>
           <span class="project-timeframe">{org.timeframe}</span>
         </p>
       ))

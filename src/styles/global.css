@@ -45,7 +45,7 @@ html {
   text-decoration: none;
 }
 .nav-link:hover {
-  text-decoration: 2px underline purple;
+  text-decoration: 2px underline var(--default-color);
   text-underline-offset: 8px;
   color: var(--default-color);
 }

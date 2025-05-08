@@ -1,5 +1,6 @@
 ---
-const currPath: string = Astro.url.pathname;
+const currPath: string =
+  Astro.url.pathname === "/" ? Astro.url.pathname : Astro.url.pathname.replace(/\/+$/, "");
 
 import "../styles/global.css";
 ---
