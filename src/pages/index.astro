@@ -1,30 +1,15 @@
 ---
-import Navbar from '../components/Navbar.astro'
-import Footer from '../components/Footer.astro'
-
-import '../styles/styles.css'
+import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Home | Alex Leung</title>
-	</head>
-	<body>
-		<div id="root">
-			<Navbar></Navbar>
-			<main>
-				<h2 class="home-heading">About Me</h1>
-				<p>
-					Hello, I'm Alex.
-				</p>
-				<p>
-					I'm interested in software development, open-source, human-computer interaction, and writing. I am always learning and being 
-					fascinated by the intersection between humans and software.
-				</p>
-			</main>
-			<Footer></Footer>
-		</div>
-	</body>
-</html>
+<DefaultLayout>
+  <div slot="page-heading">HI 你好, I'M ALEX!</div>
+  <div slot="page-content">
+    <p class="about-pronouns">[<i> he / him </i>]</p>
+    <p class="about-paragraph">I'm a software developer that does open-source as a side hobby.</p>
+    <p class="about-paragraph">
+      I enjoy programming in TypeScript, development tools, writing, and interested in
+      human-computer interaction.
+    </p>
+  </div>
+</DefaultLayout>

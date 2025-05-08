@@ -1,0 +1,143 @@
+/*
+* variables
+*/
+
+:root {
+  --default-gap: 12px;
+  --default-padding: 12px;
+  --default-color: #82488c;
+  --default-base-color: #000000;
+}
+
+/* 
+* default
+*/
+
+html {
+  font-family: "system-ui";
+}
+
+#root {
+  padding: 20px;
+  padding-top: 80px;
+}
+
+/* 
+* navbar 
+*/
+
+.navbar-inner-parent {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.navbar-left-static {
+  font-weight: 600;
+}
+.navbar-right-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-gap);
+}
+
+.nav-link {
+  color: var(--default-base-color);
+  text-decoration: none;
+}
+.nav-link:hover {
+  text-decoration: 2px underline purple;
+  text-underline-offset: 8px;
+  color: var(--default-color);
+}
+.nav-link.active {
+  color: var(--default-color);
+}
+
+/* 
+* about/home 
+*/
+
+.about-paragraph {
+  padding-top: var(--default-padding);
+}
+.about-pronouns {
+  font-size: 15px;
+}
+
+/* 
+* projects
+*/
+
+.projects-paragraph {
+  padding-top: var(--default-padding);
+  display: flex;
+  flex-direction: column;
+}
+.project-url {
+  color: var(--default-base-color);
+}
+.project-url:hover {
+  color: var(--default-color);
+}
+.project-stack {
+  font-size: 14px;
+}
+.project-timeframe {
+  font-size: 14px;
+}
+
+.open-source-heading {
+  padding-top: calc(var(--default-padding) + 8px);
+  font-weight: bold;
+  color: var(--default-color);
+  font-size: 18px;
+}
+
+/*
+* footer
+*/
+
+.footer {
+  display: flex;
+  gap: calc(var(--default-gap) + 8px);
+}
+
+.footer-icon {
+  color: var(--default-base-color);
+  font-size: 1.8rem;
+}
+
+/* 
+* everything else 
+*/
+
+.heading {
+  padding-top: 40px;
+  font-weight: bold;
+  color: var(--default-color);
+  font-size: 18px;
+}
+
+.content {
+  padding-bottom: calc(var(--default-padding) * 2);
+  line-height: 1.75;
+  font-size: 18px;
+}
+
+/* 
+* media queries 
+*/
+
+@media (min-width: 570px) {
+  .navbar-right-links {
+    flex-direction: row;
+    gap: calc(var(--default-gap) + 8px); /* 20px */
+  }
+}
+
+@media (min-width: 600px) {
+  #root {
+    margin: 0 auto;
+    width: 570px;
+  }
+}
