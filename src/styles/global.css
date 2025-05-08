@@ -94,6 +94,20 @@ html {
 }
 
 /*
+* contact
+*/
+
+.contact-paragraph {
+  padding-top: var(--default-padding);
+}
+.contact-paragraph a {
+  color: var(--default-base-color);
+}
+.contact-paragraph a:hover {
+  color: var(--default-color);
+}
+
+/*
 * footer
 */
 
