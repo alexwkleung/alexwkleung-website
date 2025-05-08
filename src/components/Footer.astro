@@ -1,15 +1,17 @@
 ---
-import { getCurrYear } from "../util/year";
+import { Icon } from "astro-icon/components";
+
+import "../styles/global.css";
 ---
 
-<footer>
-    <p>
-        Alex Leung &copy; 2023 - {getCurrYear}
-    </p>
-</footer>
-
-<style>
-    footer {
-        margin: auto;
-    }
-</style>
+<div class="footer">
+  <a href="https://github.com/alexwkleung" class="footer-icon" target="_blank"
+    ><Icon name="mdi:github" class="github-icon" /></a
+  >
+  <a href="https://www.linkedin.com/in/alex-leung-a80bb7293/" class="footer-icon" target="_blank"
+    ><Icon name="mdi:linkedin" class="linkedin-icon" /></a
+  >
+  <a href="mailto:alexleung25@outlook.com" class="footer-icon" target="_blank"
+    ><Icon name="mdi:email" class="email-icon" /></a
+  >
+</div>

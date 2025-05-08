@@ -1,124 +1,71 @@
 ---
-import Navbar from '../components/Navbar.astro'
-import Footer from '../components/Footer.astro'
+import DefaultLayout from "../layouts/DefaultLayout.astro";
 
-import '../styles/styles.css'
-
-interface IProject {
-    name: string,
-    info: string,
-    link: string,
-    language: string[]
+interface Projects {
+  name: string;
+  url: string;
+  stack: string;
+  timeframe: string;
 }
 
-const project: IProject[] = [
-    {
-        name: "Iris",
-        info: "A comfortable note-taking app powered by Markdown.",
-        link: "https://github.com/alexwkleung/Iris",
-        language: ["TypeScript", "Rust"]
-    },
-    {
-        name: "TermStylist",
-        info: "A header-only terminal colours library.",
-        link: "https://github.com/alexwkleung/TermStylist",
-        language: ["C++"]
-    }
-]
+const projects: Projects[] = [
+  {
+    name: "Iris",
+    url: "https://github.com/alexwkleung/Iris",
+    stack: "TypeScript, Rust, Electron",
+    timeframe: "2022 - 2024",
+  },
+  {
+    name: "Block URL",
+    url: "https://github.com/alexwkleung/block-url-extension",
+    stack: "React, TypeScript",
+    timeframe: "2025",
+  },
+  {
+    name: "TermStylist",
+    url: "https://github.com/alexwkleung/TermStylist",
+    stack: "C++",
+    timeframe: "2022",
+  },
+];
+
+const openSource = [
+  {
+    name: "Microsoft Visual Studio Code Documentation",
+    url: "https://github.com/microsoft/vscode-docs/pulls?q=is%3Apr+author%3Aalexwkleung+is%3Aclosed",
+    stack: "Markdown, Git",
+    timeframe: "2023 - 2024",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projects | Alex Leung</title>
-	</head>
-	<body>
-		<div id="root">
-			<Navbar></Navbar>
-			<main>
-				<div id="projects-main-container">
-                    <div class="project-intro">
-                        <h2 id="project-intro-heading">Projects</h2>
-                        <p>
-                            This is a list of my showcased projects. Other projects can be found on my GitHub.
-                        </p>
-                    </div>
-
-                    <div id="project-grid-container">
-                        {
-                            project.map((props) => 
-                                <div class="project-container">
-                                    <h2 class="project-name-heading">{props.name}</h2>
-
-                                    <div class="project-info">
-                                        <p>{props.info}</p>
-                                    </div>
-
-                                        {
-                                            props.language.map((lang) => 
-                                                <span class="project-language">
-                                                    {lang}
-                                                </span>    
-                                            )
-                                        }
-
-                                    <div class="project-link-container">
-                                        <a href={props.link} class="project-a" target="_blank">GitHub Repo</a>
-                                    </div>
-                                </div>
-                            )
-                        }
-                    </div>
-                </div>
-			</main>
-			<Footer></Footer>
-		</div>
-	</body>
-</html>
-
-<style>
-    .project-container:not(.project-container:first-child) {
-        margin-top: 40px;
-        border-top: solid 1px black;
+<DefaultLayout>
+  <div slot="page-heading">PROJECTS</div>
+  <div slot="page-content">
+    <p class="projects-paragraph">A list of personal projects.</p>
+    {
+      projects.map((project) => (
+        <p class="projects-paragraph">
+          <a href={project.url} class="project-url" target="_blank">
+            <span class="project-name">{project.name}</span>
+          </a>
+          <span class="project-stack">{project.stack.toUpperCase()}</span>
+          <span class="project-timeframe">{project.timeframe}</span>
+        </p>
+      ))
     }
-    .project-container:last-child {
-        margin-bottom: 20px;
+    <div class="open-source-heading text">OPEN SOURCE</div>
+    <p class="projects-paragraph">A list of open-source contributions.</p>
+    {
+      openSource.map((org) => (
+        <p class="projects-paragraph">
+          <a href={org.url} class="project-url" target="_blank">
+            <span class="project-name">{org.name}</span>
+          </a>
+          <span class="project-stack">{org.stack.toUpperCase()}</span>
+          <span class="project-timeframe">{org.timeframe}</span>
+        </p>
+      ))
     }
-
-    .project-a {
-        position: relative;
-        text-decoration: none;
-        color: #5C6BC0;
-        font-size: 1em;
-        top: 18px;
-    }
-
-    .project-language {
-        border-radius: 5px;
-        padding: 3px;
-        font-size: 16px;
-        background-color: rgb(217 215 215);
-        margin-right: 7px;
-        color: #000000;
-    }
-
-    @media (min-width: 920px) {
-        .project-container {
-            margin-bottom: 20px;
-        }
-
-        .project-container:not(.project-container:first-child) {
-            margin-top: 0px;
-            border-top: none;
-        }
-        .project-container:last-child {
-            margin-bottom: 0px;
-        }
-
-        #project-grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-</style>
+  </div>
+</DefaultLayout>

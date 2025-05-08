@@ -7,11 +7,15 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "clean": "rm src/pages/posts/*md"
+    "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.0.5",
-    "dayjs": "^1.11.10"
+    "astro": "^4.0.5"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "astro-icon": "^1.1.5",
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1"
   }
 }

@@ -1,0 +1,29 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+    <title>Alex Leung</title>
+  </head>
+  <body>
+    <div id="root">
+      <Navbar />
+      <main class="main-content">
+        <div class="heading text">
+          <slot name="page-heading" />
+        </div>
+        <div class="content text">
+          <slot name="page-content" />
+        </div>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
