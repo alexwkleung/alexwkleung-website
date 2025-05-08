@@ -1,6 +1,4 @@
 ---
-const currPath: string = Astro.url.pathname;
-
 import "../styles/global.css";
 ---
 
@@ -8,13 +6,18 @@ import "../styles/global.css";
   <div class="navbar-inner-parent">
     <div class="navbar-left-static text">Alex Leung</div>
     <div class="navbar-right-links">
-      <a href="/" class={`nav-link text ${currPath === "/" ? "active" : ""}`}>about</a>
-      <a href="/projects" class={`nav-link text ${currPath === "/projects" ? "active" : ""}`}
-        >projects</a
-      >
-      <a href="/contact" class={`nav-link text ${currPath === "/contact" ? "active" : ""}`}
-        >contact</a
-      >
+      <a href="/" class="nav-link text" url-path="/">about</a>
+      <a href="/projects" class="nav-link text" url-path="/projects">projects</a>
+      <a href="/contact" class="nav-link text" url-path="/contact">contact</a>
     </div>
   </div>
 </div>
+<script>
+  const currPath: string = window.location.pathname;
+
+  document.querySelectorAll(".nav-link").forEach((link: Element) => {
+    if (link.getAttribute("url-path") === currPath) {
+      link.classList.add("active");
+    }
+  });
+</script>
