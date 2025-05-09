@@ -74,6 +74,9 @@ html {
   flex-direction: column;
   align-items: flex-start;
 }
+.projects-paragraph.text {
+  display: block;
+}
 .project-url {
   color: var(--default-base-color);
 }
@@ -85,6 +88,12 @@ html {
 }
 .project-timeframe {
   font-size: 14px;
+}
+.projects-paragraph a {
+  color: var(--default-base-color);
+}
+.projects-paragraph a:hover {
+  color: var(--default-color);
 }
 
 .open-source-heading {
