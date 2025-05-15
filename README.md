@@ -1,6 +1,6 @@
 # alexwkleung website
 
-My portfolio website. Created with Astro.
+My portfolio website created with Astro.
 
 Feel free to use this as a template! :)
 
